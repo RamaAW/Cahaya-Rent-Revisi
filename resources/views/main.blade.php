@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="{{asset('img/logo2.png')}}">
     <link rel="shortcut icon" href="{{asset('img/logo2.png')}}">
-    <link rel="stylesheet" href="{{ asset('style/assets/css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ asset('style/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="style/assets/css/normalize.css">
+    <link rel="stylesheet" href="style/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('style/assets/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('style/assets/css/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('style/assets/css/flag-icon.min.css') }}">
