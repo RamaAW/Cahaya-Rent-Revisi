@@ -6,12 +6,12 @@
     <title>Cahaya Rent | Admin</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="{{asset('img/logo2.png')}}">
+    <link rel="shortcut icon" href="{{asset('img/logo2.png')}}">
     <link rel="stylesheet" href="{{ asset('style/assets/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('style/assets/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('styleassets/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/assets/css/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('style/assets/css/flag-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('style/assets/css/cs-skin-elastic.css') }}">
     <link rel="stylesheet" href="{{ asset('style/assets/scss/style.css') }}">
@@ -19,10 +19,7 @@
 </head>
 <body>
     
-    <script src="{{ asset('style/assets/js/vendor/jquery-2.1.4.min.js') }}"></script>
-    <script src="{{ asset('style/assets/js/popper.min.js') }}"></script>
-    <script src="{{ asset('style/assets/js/plugins.js') }}"></script>
-    <script src="{{ asset('style/assets/js/main.js') }}"></script>
+    
 
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
@@ -144,6 +141,9 @@
         
 
     </div>    
-
+    <script src="{{ asset('style/assets/js/vendor/jquery-2.1.4.min.js') }}"></script>
+    <script src="{{ asset('style/assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('style/assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('style/assets/js/main.js') }}"></script>
 </body>
 </html>

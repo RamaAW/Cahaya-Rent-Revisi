@@ -12,7 +12,7 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $batas = 5;
+        $batas = 10;
         $data_about = About::orderBy('id')->paginate($batas);
         $no = $batas * ($data_about->currentPage()-1);
 
