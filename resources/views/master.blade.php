@@ -3,21 +3,21 @@
 <html>
 
 <head>
-	<link rel="shortcut icon" href="{{asset('img/logo2.png')}}">
+	<link rel="shortcut icon" href="img/logo2.png">
 	<title>Cahaya Rent</title>
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-	<link rel="stylesheet" href="{{asset('css/linearicons.css')}}">
-	<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
-	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
-	<link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
-	<link rel="stylesheet" href="{{asset('css/nice-select.css')}}">					
-	<link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
-	<link rel="stylesheet" href="{{asset('css/animate-text.css')}}">
-	<link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
-	<link rel="stylesheet" href="{{asset('css/main.css')}}">
-	<link href="{{asset('fontawesome/css/fontawesome.css')}}" rel="stylesheet">
-  	<link href="{{asset('fontawesome/css/brands.css')}}" rel="stylesheet">
-  	<link href="{{asset('fontawesome/css/solid.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">					
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/animate-text.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="fontawesome/css/fontawesome.css" rel="stylesheet">
+  	<link href="fontawesome/css/brands.css" rel="stylesheet">
+  	<link href="fontawesome/css/solid.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/003603851d.js" crossorigin="anonymous"></script>
 </head>
 
@@ -28,7 +28,7 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-between d-flex">
 			    <div id="logo">
-			        <a href="../PAD1"><img src="{{asset('img/Dark Logotype 2.png')}}" width="130" height="25"></a>
+			        <a href="../PAD1"><img src="img/Dark Logotype 2.png" width="130" height="25"></a>
 			    </div>
 			    <nav id="nav-menu-container"><!-- #nav-menu-container -->	
 				    <ul class="nav-menu">
@@ -84,7 +84,7 @@
 		</div>
 		<div>
 			<center>
-				<img class="img-fluid" src="{{asset ('img/about us.png') }}" width="100%" height="100%">
+				<img class="img-fluid" src="img/about us.png" width="100%" height="100%">
 			</center>
 		</div>
 		<div class="row services">
@@ -263,20 +263,20 @@
 	</footer>
 	<!-- End footer Area (Contact) -->	
 
-	<script src="{{asset ('js/vendor/jquery-2.2.4.min.js') }}"></script>
-	<script src="{{asset ('js/vendor/bootstrap.min.js') }}"></script>
-  	<script src="{{asset ('js/easing.min.js') }}"></script>			
-	<script src="{{asset ('js/hoverIntent.js') }}"></script>
-	<script src="{{asset ('js/superfish.min.js') }}"></script>	
-	<script src="{{asset ('js/jquery.ajaxchimp.min.js') }}"></script>
-	<script src="{{asset ('js/jquery.magnific-popup.min.js') }}"></script>
-	<script src="{{asset ('js/animate-text.js') }}"></script>
-	<script src="{{asset ('js/owl.carousel.min.js') }}"></script>			
-	<script src="{{asset ('js/jquery.sticky.js') }}"></script>
-	<script src="{{asset ('js/jquery.nice-select.min.js') }}"></script>			
-	<script src="{{asset ('js/parallax.min.js') }}"></script>	
-	<script src="{{asset ('js/mail-script.js') }}"></script>	
-	<script src="{{asset ('js/main.js') }}"></script>	
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+  	<script src="js/easing.min.js"></script>			
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>	
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/animate-text.js"></script>
+	<script src="js/owl.carousel.min.js"></script>			
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>			
+	<script src="js/parallax.min.js"></script>	
+	<script src="js/mail-script.js"></script>	
+	<script src="js/main.js"></script>	
 </body>
 
 </html>
