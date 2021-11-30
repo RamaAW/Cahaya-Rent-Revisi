@@ -224,58 +224,7 @@
 	</section>
 	<!-- end section 6 (Reviews Area) -->
 
-	<!-- start section 7 (FAQ) -->
-	<section class="faq-area section-gap" id="faq">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="menu-content pb-60 col-lg-10">
-					<div class="title text-center">
-						<h1 class="mb-10">F A Q</h1>
-						<p>Cahaya Rent</p>
-					</div>
-				</div>
-			</div>						
-			<div class="row justify-content-start">
-				<div class="col-lg-6 faq-left">
-					<div id="accordion">
 
-						<?php
-						$dbHost = 'localhost';
-						$dbName = 'db_cahaya';
-						$dbUsername = "root";
-						$dbPassword = "";
-					
-						try{
-							$dbConn = new PDO ("mysql:host={$dbHost};dbname={$dbName}", $dbUsername, $dbPassword);
-							$dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-						}
-						catch(PDOException $e){
-							echo $e -> getMessage();
-						}
-
-							$sql = "SELECT * FROM tb_faq ORDER BY id";
-							$result = $dbConn -> prepare($sql);
-							$result -> execute();
-							$huruf = array("zero", "One", "Two", "Three", "Four", "Five");
-							while($row = $result -> fetch(PDO::FETCH_ASSOC)){
-								echo "<div class='card'>";
-								echo "<div class='card-header' id='heading".$huruf[$row['id']]."'>";
-								echo "<h5 class='mb-0'>";
-								echo "<button class='btn btn-link' data-toggle='collapse' data-target='#collapse".$huruf[$row['id']]."' aria-expanded='true' aria-controls='collapse".$huruf[$row['id']]."'>";
-								echo $row['pertanyaan'];
-								echo "</button></h5></div>";
-								echo "<div id='collapse".$huruf[$row['id']]."' class='collapse' aria-labelledby='heading".$huruf[$row['id']]."' data-parent='#accordion'><div class='card-body'>";
-								echo $row['jawaban'];
-								echo "</div></div></div>";
-							}
-						?>		
-
-					</div>							
-				</div>	
-			</div>
-		</div>	
-	</section>
-	<!-- end section 7 (FAQ) -->
 			
 	<!-- start footer Area (Contact) -->		
 	<footer class="footer-area section-gap" id="feedback">
