@@ -40,18 +40,32 @@
 	</header>
 
 <!-- start section 4 (Overview part 1) -->
-<div class="container">
-<div class="row d-flex justify-content-center" id="overview">
-		<div class="col-md-8 pb-40 header-text">
-			<center>
-				<h1>Detail Product Laptop</h1>
-			</center>
+<!-- Section Header -->
+<section class="banner-area" id="home">	
+		<div class="container">
+			<div class="row fullscreen d-flex align-items-center justify-content-center">
+				<div class="banner-content col-lg-10">
+					<br><br><br>
+					<h5 class="text-white text-uppercase">Detail Produk yang Disewakan</h5>
+					<h1 class="cd-headline clip is-full-width">
+						<span>Detail</span>
+						<span class="cd-words-wrapper">
+							<b class="is-visible">Product</b>
+							<b>Product</b>
+							<b>Product</b>
+							<b>Product</b>
+							<b>Product</b>
+							<b>Product</b>
+						</span>
+					</h1>
+					<br>
+				</div>											
+			</div>
 		</div>
-	</div>
-	<div class="row d-flex justify-content-center">
-		<center><img src="{{asset('img/HP/hero-img.jpg')}}"></center>
-	</div>
-</div>
+	</section>
+<!-- End Section Header -->
+
+
 	<section class="home-about-area">
         @foreach ($details as $data)
 		<div class="container-fluid">				

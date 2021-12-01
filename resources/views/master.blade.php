@@ -84,7 +84,7 @@
 		</div>
 		<div>
 			<center>
-				<img class="img-fluid" src="/img/about us.png" width="100%" height="100%">
+				<img class="img-fluid" src="/img/aboutuscahaya.png" width="100%" height="100%">
 			</center>
 		</div>
 		<div class="row services">
