@@ -27,18 +27,19 @@ class AboutController extends Controller
         $this->validate($request,[
             'head'         => 'required|string',
             'deskripsi'       => 'required',
-            'icon'          => 'required|image|mimes:jpeg,jpg,png',
+            'icon'          => 'required|file',
         ]);
         $about = New About();
         $about->head = $request->head;
         $about->deskripsi = $request->deskripsi;
-        $icon = $request->icon;
-        $namafile = time().'.'.
-        $icon->getClientOriginalExtension();
+        $about->icon = $request->file('icon')->store('post-images');
+        // $icon = $request->icon;
+        // $namafile = time().'.'.
+        // $icon->getClientOriginalExtension();
 
-        Image::make($icon)->resize(100,100)->save('thumb/'.$namafile);
-        $icon->move('images/', $namafile);
-        $about->icon=$namafile;
+        // Image::make($icon)->resize(100,100)->save('thumb/'.$namafile);
+        // $icon->move('images/', $namafile);
+        // $about->icon=$namafile;
         $about->save();
         return redirect('/')->with('pesan', 'Data About Us berhasil disimpan');
     }
@@ -58,13 +59,14 @@ class AboutController extends Controller
         $about = About::find($id);
         $about->head = $request->head;
         $about->deskripsi = $request->deskripsi;
-        $icon = $request->icon;
-        $namafile = time().'.'.
-        $icon->getClientOriginalExtension();
+        $about->icon = $request->file('icon')->store('post-images');
+        // $icon = $request->icon;
+        // $namafile = time().'.'.
+        // $icon->getClientOriginalExtension();
 
-        Image::make($icon)->resize(100,100)->save('thumb/'.$namafile);
-        $icon->move('images/', $namafile);
-        $about->icon=$namafile;
+        // Image::make($icon)->resize(100,100)->save('thumb/'.$namafile);
+        // $icon->move('images/', $namafile);
+        // $about->icon=$namafile;
         $about->update();
         return redirect('/')->with('pesan', 'Data About Us Berhasil di Ubah');
     }

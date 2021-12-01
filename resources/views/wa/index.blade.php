@@ -28,6 +28,7 @@
         
     <!-- // -->
     <div class="content">
+    <p align="right"><a href="{{route('wa.create')}}" class="btn btn-warning">Tambah Link WhatsApp</a></p>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -55,7 +56,6 @@
                 @endforeach
             </tbody>
 </table>
-<p align="right"><a href="{{route('wa.create')}}">Tambah Data Link No WA</a></p>
     <!-- // -->
     </div>
 </div>

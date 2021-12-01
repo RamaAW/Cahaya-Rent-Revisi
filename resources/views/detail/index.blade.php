@@ -28,6 +28,7 @@
         
     <!-- // -->
     <div class="content">
+    <p align="right"><a href="{{route('detail.create')}}" class="btn btn-warning">Tambah Detail Produk</a></p>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -61,7 +62,6 @@
                 @endforeach
             </tbody>
 </table>
-<p align="right"><a href="{{route('detail.create')}}">Tambah Detail Produk</a></p>
     <!-- // -->
     </div>
 </div>

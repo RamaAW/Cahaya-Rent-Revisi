@@ -36,15 +36,18 @@ class ProdukController extends Controller
         $produk->jenis = $request->jenis;
         $produk->deskripsi = $request->deskripsi;
         $produk->produk_seo = Str::slug($request->jenis, '-');
-        $icon = $request->icon;
+        $produk->icon = $request->file('icon')->store('post-images');
+        // $icon = $request->icon;
     
-        $namafile = time().'.'.
-        $icon->getClientOriginalExtension();
+        // $namafile = time().'.'.
+        // $icon->getClientOriginalExtension();
 
-        Image::make($icon)->resize(80,75)->save('thumb/'.$namafile);
-        $icon->move('images/', $namafile);
-        $produk->icon=$namafile;
+        // Image::make($icon)->resize(80,75)->save('thumb/'.$namafile);
+        // $icon->move('images/', $namafile);
+        // $produk->icon=$namafile;
+        
         // $produk->tombol = $request->tombol;
+        
         $produk->save();
         return redirect('/produk')->with('pesan', 'Data Produk berhasil disimpan');
     }
@@ -65,15 +68,18 @@ class ProdukController extends Controller
         $produk->jenis = $request->jenis;
         $produk->deskripsi = $request->deskripsi;
         $produk->produk_seo = Str::slug($request->jenis, '-');
+        $produk->icon = $request->file('icon')->store('post-images');
+        
+        // $icon = $request->icon;
+        // $namafile = time().'.'.
+        // $icon->getClientOriginalExtension();
 
-        $icon = $request->icon;
-        $namafile = time().'.'.
-        $icon->getClientOriginalExtension();
+        // Image::make($icon)->resize(80,75)->save('thumb/'.$namafile);
+        // $icon->move('images/', $namafile);
+        // $produk->icon=$namafile;
 
-        Image::make($icon)->resize(80,75)->save('thumb/'.$namafile);
-        $icon->move('images/', $namafile);
-        $produk->icon=$namafile;
         // $produk->tombol = $request->tombol;
+        
         $produk->update();
         return redirect('/produk')->with('pesan', 'Data Produk Berhasil di Ubah');
     }

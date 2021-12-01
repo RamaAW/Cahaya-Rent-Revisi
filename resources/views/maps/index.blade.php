@@ -28,6 +28,7 @@
         
     <!-- // -->
     <div class="content">
+    <p align="right"><a href="{{route('maps.create')}}" class="btn btn-warning">Tambah Maps</a></p>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -59,7 +60,6 @@
                 @endforeach
             </tbody>
 </table>
-<p align="right"><a href="{{route('maps.create')}}">Tambah Alamat</a></p>
     <!-- // -->
     </div>
 </div>

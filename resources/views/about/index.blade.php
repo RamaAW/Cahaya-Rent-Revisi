@@ -25,9 +25,10 @@
 
 <div class="content mt-3">
     <div class="animated fadeIn">
-        
+
     <!-- // -->
     <div class="content">
+    <p align="right"><a href="{{route('about.create')}}" class="btn btn-warning">Tambah About Us</a></p>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -59,7 +60,6 @@
                 @endforeach
             </tbody>
 </table>
-<p align="right"><a href="{{route('about.create')}}">Tambah About Us</a></p>
     <!-- // -->
     </div>
 </div>

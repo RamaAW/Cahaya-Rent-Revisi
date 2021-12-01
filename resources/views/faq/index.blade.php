@@ -28,6 +28,7 @@
         
     <!-- // -->
     <div class="content">
+    <p align="right"><a href="{{route('faq.create')}}" class="btn btn-warning">Tambah F A Q</a></p>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -57,7 +58,6 @@
                 @endforeach
             </tbody>
 </table>
-<p align="right"><a href="{{route('faq.create')}}">Tambah FAQ</a></p>
     <!-- // -->
     </div>
 </div>

@@ -28,6 +28,7 @@
         
     <!-- // -->
     <div class="content">
+    <p align="right"><a href="{{route('produk.create')}}" class="btn btn-warning">Tambah Jenis Produk</a></p>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -61,7 +62,6 @@
                 @endforeach
             </tbody>
 </table>
-<p align="right"><a href="{{route('produk.create')}}">Tambah Produk</a></p>
     <!-- // -->
     </div>
 </div>

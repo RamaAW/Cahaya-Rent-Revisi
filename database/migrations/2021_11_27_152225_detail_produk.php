@@ -15,11 +15,11 @@ class DetailProduk extends Migration
     {
         Schema::create('tb_detail', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_produk');
             $table->string('tipe');
             $table->text('keterangan');
             $table->string('foto');
-            $table->foreignId('id_detail');
+            $table->unsignedBigInteger('id_detail');
+            $table->foreign('id_detail')->references('id')->on('tb_produk')->onDelete('cascade');
             $table->timestamps();
         });
     }

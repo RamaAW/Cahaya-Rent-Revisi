@@ -28,6 +28,7 @@
         
     <!-- // -->
     <div class="content">
+    <p align="right"><a href="{{route('dok.create')}}" class="btn btn-warning">Tambah Dokumentasi</a></p>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -59,7 +60,6 @@
                 @endforeach
             </tbody>
 </table>
-<p align="right"><a href="{{route('dok.create')}}">Tambah Dokumentasi</a></p>
     <!-- // -->
     </div>
 </div>

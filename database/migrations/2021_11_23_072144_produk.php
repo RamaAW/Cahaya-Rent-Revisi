@@ -18,7 +18,6 @@ class Produk extends Migration
             $table->string('jenis');
             $table->text('deskripsi');
             $table->string('icon');
-            $table->string('tombol');
             $table->timestamps();
         });
     }

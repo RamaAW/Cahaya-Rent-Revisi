@@ -49,14 +49,6 @@
         <button type="submit" class="btn btn-primary">Simpan</button>
         <a class="btn btn-secondary" href="/">Cancel</a>
 
-            <!-- <div>Judul <input type="text" name="judul"></div>
-            <div>Penulis <input type="text" name="penulis"></div>
-            <div>Harga <input type="text" name="harga"></div>
-            <div>Tgl. Terbit <input type="text" name="tgl_terbit" class="date form-control" placeholder="yyyy/mm/dd"></div>
-            <div><br>
-                <button type="submit">Save</button>
-                <a href="/buku">Cancel</a>
-            </div> -->
         </form>
     </div>
 @endsection

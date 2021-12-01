@@ -28,6 +28,7 @@
         
     <!-- // -->
     <div class="content">
+    <p align="right"><a href="{{route('email.create')}}" class="btn btn-warning">Tambah Email</a></p>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -55,7 +56,6 @@
                 @endforeach
             </tbody>
 </table>
-<p align="right"><a href="{{route('email.create')}}">Tambah Data Link Email</a></p>
     <!-- // -->
     </div>
 </div>

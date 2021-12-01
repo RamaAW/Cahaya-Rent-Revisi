@@ -32,13 +32,14 @@ class DokController extends Controller
         $dok = New Dokumentasi();
         $dok->judul = $request->judul;
         $dok->tanggal = $request->tanggal;
-        $foto = $request->foto;
-        $namafile = time().'.'.
-        $foto->getClientOriginalExtension();
+        $dok->foto = $request->file('foto')->store('post-images');
+        // $foto = $request->foto;
+        // $namafile = time().'.'.
+        // $foto->getClientOriginalExtension();
 
-        Image::make($foto)->save('thumb/'.$namafile);
-        $foto->move('images/', $namafile);
-        $dok->foto=$namafile;
+        // Image::make($foto)->save('thumb/'.$namafile);
+        // $foto->move('images/', $namafile);
+        // $dok->foto=$namafile;
         $dok->save();
         return redirect('/dok')->with('pesan', 'Data Dokumentasi berhasil disimpan');
     }
@@ -58,13 +59,14 @@ class DokController extends Controller
         $dok = Dokumentasi::find($id);
         $dok->judul = $request->judul;
         $dok->tanggal = $request->tanggal;
-        $foto = $request->foto;
-        $namafile = time().'.'.
-        $foto->getClientOriginalExtension();
+        $dok->foto = $request->file('foto')->store('post-images');
+        // $foto = $request->foto;
+        // $namafile = time().'.'.
+        // $foto->getClientOriginalExtension();
 
-        Image::make($foto)->save('thumb/'.$namafile);
-        $foto->move('images/', $namafile);
-        $dok->foto=$namafile;
+        // Image::make($foto)->save('thumb/'.$namafile);
+        // $foto->move('images/', $namafile);
+        // $dok->foto=$namafile;
         $dok->update();
         return redirect('/dok')->with('pesan', 'Data Dokumentasi Berhasil di Ubah');
     }

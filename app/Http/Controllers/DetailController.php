@@ -35,14 +35,15 @@ class DetailController extends Controller
         $detail->tipe = $request->tipe;
         $detail->keterangan = $request->keterangan;
         $detail->id_detail = $request->id_detail;
+        $detail->foto = $request->file('foto')->store('post-images');
 
-        $foto = $request->foto;
-        $namafile=time().'.'.$foto->getClientOriginalExtension();
+        // $foto = $request->foto;
+        // $namafile=time().'.'.$foto->getClientOriginalExtension();
 
-        Image::make($foto)->resize(200,150)->save('thumb/'.$namafile);
-        $foto->move('images/',$namafile);
+        // Image::make($foto)->resize(200,150)->save('thumb/'.$namafile);
+        // $foto->move('images/',$namafile);
 
-        $detail->foto=$namafile;
+        // $detail->foto=$namafile;
         $detail->save();
         return redirect('/detail')->with('pesan', 'Data Detail Produk berhasil disimpan');
     }
@@ -66,12 +67,13 @@ class DetailController extends Controller
         $detail->tipe = $request->tipe;
         $detail->keterangan = $request->keterangan;
         $detail->id_detail = $request->id_detail;
-        $foto = $request->foto;
-        $namafile=time().'.'.$foto->getClientOriginalExtension();
+        $detail->foto = $request->file('foto')->store('post-images');
+        // $foto = $request->foto;
+        // $namafile=time().'.'.$foto->getClientOriginalExtension();
 
-        Image::make($foto)->resize(200,150)->save('thumb/'.$namafile);
-        $foto->move('images/',$namafile);
-        $detail->foto=$namafile;
+        // Image::make($foto)->resize(200,150)->save('thumb/'.$namafile);
+        // $foto->move('images/',$namafile);
+        // $detail->foto=$namafile;
         $detail->update();
         return redirect('/detail')->with('pesan', 'Data Detail Produk Berhasil di Ubah');
     }

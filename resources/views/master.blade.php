@@ -3,21 +3,21 @@
 <html>
 
 <head>
-	<link rel="shortcut icon" href="img/logo2.png">
+	<link rel="shortcut icon" href="/img/logo2.png">
 	<title>Cahaya Rent</title>
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-	<link rel="stylesheet" href="css/linearicons.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/nice-select.css">					
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/animate-text.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link href="fontawesome/css/fontawesome.css" rel="stylesheet">
-  	<link href="fontawesome/css/brands.css" rel="stylesheet">
-  	<link href="fontawesome/css/solid.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/linearicons.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/magnific-popup.css">
+	<link rel="stylesheet" href="/css/nice-select.css">					
+	<link rel="stylesheet" href="/css/animate.min.css">
+	<link rel="stylesheet" href="/css/animate-text.css">
+	<link rel="stylesheet" href="/css/owl.carousel.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+  	<link href="/fontawesome/css/brands.css" rel="stylesheet">
+  	<link href="/fontawesome/css/solid.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/003603851d.js" crossorigin="anonymous"></script>
 </head>
 
@@ -28,7 +28,7 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-between d-flex">
 			    <div id="logo">
-			        <a href="../PAD1"><img src="img/Dark Logotype 2.png" width="130" height="25"></a>
+			        <a href="../PAD1"><img src="/img/Dark Logotype 2.png" width="130" height="25"></a>
 			    </div>
 			    <nav id="nav-menu-container"><!-- #nav-menu-container -->	
 				    <ul class="nav-menu">
@@ -84,14 +84,14 @@
 		</div>
 		<div>
 			<center>
-				<img class="img-fluid" src="img/about us.png" width="100%" height="100%">
+				<img class="img-fluid" src="/img/about us.png" width="100%" height="100%">
 			</center>
 		</div>
 		<div class="row services">
 			@foreach ($data_about as $about)
 			<div class="col-md-4">
 				<div class="servicee">
-					<div class="icon-holder"><img src="{{asset('thumb/'.$about->icon)}}"></div>
+					<div class="icon-holder"><img src="{{asset('storage/'.$about->icon)}}"></div>
 					<h4 class="heading">{{$about->head}}</h4>
 					<p class="description">{{$about->deskripsi}}</p>
 				</div>
@@ -114,11 +114,11 @@
 			<div class="row services">
 				@foreach ($data_produk as $produk)
 				<div class="col-md-4"><div class="service">
-					<div class="icon-holder"><img src="{{asset('thumb/'.$produk->icon)}}"></div>
+					<div class="icon-holder"><img src="{{asset('storage/'.$produk->icon)}}"></div>
 					<h4 class="heading">{{$produk->jenis}}</h4>
 					<p class="description">{{$produk->deskripsi}}</p>
 					<br><br><br>
-					<form action="{{route ('detail.produk', $produk->produk_seo)}}" target="_blank"><button type="submit" class="btn">Detail</button></form>
+					<form action="{{route ('detail.produk', $produk->produk_seo)}}"><button type="submit" class="btn">Detail</button></form>
 				</div></div>
 				@endforeach
 			</div>
@@ -140,7 +140,7 @@
 
 			@foreach ($data_dok as $dok)
 			<div class="col-md-12 col-xs-6 work">
-				<img class="img-responsive single-unique-product" src="{{asset('thumb/'.$dok->foto)}}" alt="#">
+				<img class="img-responsive single-unique-product" src="{{asset('storage/'.$dok->foto)}}" alt="#">
 				<div class="overlay single-unique-product"></div>
 				<div class="work-content">
 					<h1>{{$dok->judul}}</h1>
@@ -223,7 +223,39 @@
 		</div>	
 	</section>
 	<!-- end section 6 (Reviews Area) -->
-
+	
+	<!-- start section 7 (FAQ) -->
+	<section class="faq-area section-gap" id="faq">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-10">
+					<div class="title text-center">
+						<h1 class="mb-10">F A Q</h1>
+						<p>Cempaka Rent</p>
+					</div>
+				</div>
+			</div>						
+			<div class="row justify-content-start">
+				<div class="col-lg-6 faq-left">
+					<div id="accordion">
+					
+						@foreach ($data_faq as $faq)
+						<div class="card">
+							<div class="card-header" id='heading"{{$faq->id}}"'>
+								<h5 class="mb-0">
+									<button class="btn btn-link" data-toggle="collapse" data-target='#collapse"{{$faq->id}}"' aria-expanded="true" aria-controls='collapse"{{$faq->id}}"'>{{$faq->pertanyaan}}</button>
+								</h5>
+							</div>
+							<div id="collapse" class='collapse"{{$faq->id}}"' aria-labelledby='heading"{{$faq->id}}"' data-parent="#accordion"> <div class="card-body">{{$faq->jawaban}}</div> </div>
+						</div>
+						@endforeach
+						
+					</div>							
+				</div>	
+			</div>
+		</div>	
+	</section>
+	<!-- end section 7 (FAQ) -->
 
 			
 	<!-- start footer Area (Contact) -->		
@@ -263,20 +295,20 @@
 	</footer>
 	<!-- End footer Area (Contact) -->	
 
-	<script src="js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
-  	<script src="js/easing.min.js"></script>			
-	<script src="js/hoverIntent.js"></script>
-	<script src="js/superfish.min.js"></script>	
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/animate-text.js"></script>
-	<script src="js/owl.carousel.min.js"></script>			
-	<script src="js/jquery.sticky.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>			
-	<script src="js/parallax.min.js"></script>	
-	<script src="js/mail-script.js"></script>	
-	<script src="js/main.js"></script>	
+	<script src="/js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="/js/vendor/bootstrap.min.js"></script>
+  	<script src="/js/easing.min.js"></script>			
+	<script src="/js/hoverIntent.js"></script>
+	<script src="/js/superfish.min.js"></script>	
+	<script src="/js/jquery.ajaxchimp.min.js"></script>
+	<script src="/js/jquery.magnific-popup.min.js"></script>
+	<script src="/js/animate-text.js"></script>
+	<script src="/js/owl.carousel.min.js"></script>			
+	<script src="/js/jquery.sticky.js"></script>
+	<script src="/js/jquery.nice-select.min.js"></script>			
+	<script src="/js/parallax.min.js"></script>	
+	<script src="/js/mail-script.js"></script>	
+	<script src="/js/main.js"></script>	
 </body>
 
 </html>
