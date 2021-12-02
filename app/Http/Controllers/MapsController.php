@@ -7,6 +7,11 @@ use App\Alamat;
 
 class MapsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $batas = 10;

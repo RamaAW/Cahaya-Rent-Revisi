@@ -10,6 +10,11 @@ use Symfony\Contracts\Service\Attribute\Required;
 
 class AboutController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $batas = 10;
@@ -41,13 +46,13 @@ class AboutController extends Controller
         // $icon->move('images/', $namafile);
         // $about->icon=$namafile;
         $about->save();
-        return redirect('/')->with('pesan', 'Data About Us berhasil disimpan');
+        return redirect('/about')->with('pesan', 'Data About Us berhasil disimpan');
     }
 
     public function destroy($id){
         $about = About::find($id);
         $about->delete();
-        return redirect('/')->with('pesan', 'Data About Us Berhasil di Musnahkan');
+        return redirect('/about')->with('pesan', 'Data About Us Berhasil di Musnahkan');
     }
 
     public function edit($id){
@@ -68,6 +73,6 @@ class AboutController extends Controller
         // $icon->move('images/', $namafile);
         // $about->icon=$namafile;
         $about->update();
-        return redirect('/')->with('pesan', 'Data About Us Berhasil di Ubah');
+        return redirect('/about')->with('pesan', 'Data About Us Berhasil di Ubah');
     }
 }

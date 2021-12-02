@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/master', 'MainController@index');
+Auth::routes([
+    'register'=>false,
+    'reset'=>false,
+]);
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'MainController@index');
 
 // About
-Route::get('/', 'AboutController@index');
+Route::get('/about', 'AboutController@index');
 Route::get('/about/create', 'AboutController@create')->name('about.create');
 Route::post('/about', 'AboutController@store')->name('about.store');
 Route::post('/about/delete/{id}', 'AboutController@destroy')->name('about.destroy');
@@ -96,3 +103,4 @@ Route::post('/detail/delete/{id}', 'DetailController@destroy')->name('detail.des
 
 // Detail Produk View
 Route::get('/detail-produk/{jenis}', 'ProdukController@detpro')->name('detail.produk');
+
