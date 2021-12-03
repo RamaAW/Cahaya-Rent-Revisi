@@ -32,7 +32,7 @@
 			    </div>
 			    <nav id="nav-menu-container"><!-- #nav-menu-container -->	
 				    <ul class="nav-menu">
-				      	<li class="menu-active"><a href="/master">Home</a></li>
+				      	<li class="menu-active"><a href="/">Home</a></li>
 				    </ul>
 				</nav>	    		
 			</div>
