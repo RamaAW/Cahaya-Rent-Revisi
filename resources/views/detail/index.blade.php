@@ -28,6 +28,19 @@
         
     <!-- // -->
     <div class="content">
+        <form action="{{route('detail.search')}}" method="get" class="form-inline">
+            @csrf
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="search" class="sr-only">Password</label>
+                <input type="text" class="form-control" id="cari" name="kata" placeholder="Cari Produk Apa?">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Cari</button>
+        </form>
+
+        <br>
+        @if(Session::has('pesan'))
+            <div class="alert alert-success">{{Session::get('pesan')}}</div>
+        @endif
     <p align="right"><a href="{{route('detail.create')}}" class="btn btn-warning">Tambah Detail Produk</a></p>
         <table class="table">
             <thead class="thead-dark">
@@ -62,7 +75,7 @@
                 @endforeach
             </tbody>
 </table>
-    <!-- // -->
+<div>{{$detail->links()}}</div>
     </div>
     </div>
 </div>

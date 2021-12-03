@@ -82,4 +82,13 @@ class DetailController extends Controller
         $detail->update();
         return redirect('/detail')->with('pesan', 'Data Detail Produk Berhasil di Ubah');
     }
+
+    public function search(Request $request)
+    {
+        $batas = 10;
+        $cari = $request ->kata;
+        $detail = DetailProduk::where('tipe', 'like', "%".$cari."%")->orwhere('keterangan', 'like', "%".$cari."%")->paginate($batas);
+        $no = $batas * ($detail->currentPage()-1);
+        return view('detail.search', compact('detail', 'no', 'cari'));
+    }
 }

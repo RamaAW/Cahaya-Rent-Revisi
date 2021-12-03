@@ -28,6 +28,9 @@
         
     <!-- // -->
     <div class="content">
+        @if(Session::has('pesan'))
+            <div class="alert alert-success">{{Session::get('pesan')}}</div>
+        @endif
     <p align="right"><a href="{{route('dok.create')}}" class="btn btn-warning">Tambah Dokumentasi</a></p>
         <table class="table">
             <thead class="thead-dark">
@@ -60,7 +63,7 @@
                 @endforeach
             </tbody>
 </table>
-    <!-- // -->
+<div>{{$data_dok->links()}}</div>
     </div>
     </div>
 </div>

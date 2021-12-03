@@ -99,6 +99,8 @@ Route::post('/detail', 'DetailController@store')->name('detail.store');
 Route::get('/detail/edit/{id}', 'DetailController@edit')->name('detail.edit');
 Route::post('/detail/update/{id}', 'DetailController@update')->name('detail.update');
 Route::post('/detail/delete/{id}', 'DetailController@destroy')->name('detail.destroy');
+Route::get('/detail/search', 'DetailController@search')->name('detail.search');
+
 
 // Detail Produk View
 Route::get('/detail-produk/{jenis}', 'ProdukController@detpro')->name('detail.produk');

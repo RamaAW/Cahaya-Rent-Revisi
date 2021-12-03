@@ -28,6 +28,9 @@
         
     <!-- // -->
     <div class="content">
+        @if(Session::has('pesan'))
+            <div class="alert alert-success">{{Session::get('pesan')}}</div>
+        @endif
     <p align="right"><a href="{{route('email.create')}}" class="btn btn-warning">Tambah Email</a></p>
         <table class="table">
             <thead class="thead-dark">
@@ -56,7 +59,7 @@
                 @endforeach
             </tbody>
 </table>
-    <!-- // -->
+<div>{{$data_email->links()}}</div>
     </div>
     </div>
 </div>

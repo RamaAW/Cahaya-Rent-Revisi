@@ -34,31 +34,31 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/about"> <i class="menu-icon fa fa-dashboard"></i>Home</a>
+                        <a href="/about"> <i class="menu-icon fas fa-address-card"></i>About Us</a>
                     </li>
                     <li>
-                        <a href="/produk"> <i class="menu-icon fa fa-puzzle-piece"></i>Product</a>
+                        <a href="/produk"> <i class="menu-icon fas fa-laptop"></i>Product</a>
                     </li>
                     <li>
-                        <a href="/dok"> <i class="menu-icon fa fa-puzzle-piece"></i>Dokumentasi</a>
+                        <a href="/dok"> <i class="menu-icon far fa-image"></i>Dokumentasi</a>
                     </li>
                     <li>
-                        <a href="/maps"> <i class="menu-icon fa fa-puzzle-piece"></i>Alamat</a>
+                        <a href="/maps"> <i class="menu-icon fas fa-map-marked-alt"></i>Alamat</a>
                     </li>
                     <li>
-                        <a href="/wa"> <i class="menu-icon fa fa-puzzle-piece"></i>WhatsApp</a>
+                        <a href="/wa"> <i class="menu-icon fab fa-whatsapp"></i>WhatsApp</a>
                     </li>
                     <li>
-                        <a href="/review"> <i class="menu-icon fa fa-puzzle-piece"></i>Reviews</a>
+                        <a href="/review"> <i class="menu-icon fas fa-book"></i>Reviews</a>
                     </li>
                     <li>
-                        <a href="/faq"> <i class="menu-icon fa fa-puzzle-piece"></i>FAQ</a>
+                        <a href="/faq"> <i class="menu-icon far fa-question-circle"></i>FAQ</a>
                     </li>
                     <li>
-                        <a href="/email"> <i class="menu-icon fa fa-puzzle-piece"></i>Email</a>
+                        <a href="/email"> <i class="menu-icon fas fa-envelope-open-text"></i>Email</a>
                     </li>
                     <li>
-                        <a href="/detail"> <i class="menu-icon fa fa-puzzle-piece"></i>Detail Produk</a>
+                        <a href="/detail"> <i class="menu-icon fas fa-info-circle"></i>Detail Produk</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -164,5 +164,7 @@
     <script src="/style/assets/js/popper.min.js"></script>
     <script src="/style/assets/js/plugins.js"></script>
     <script src="/style/assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/003603851d.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
