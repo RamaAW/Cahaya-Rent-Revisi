@@ -238,35 +238,6 @@
 			<div class="row justify-content-start">
 				<div class="col-lg-6 faq-left">
 					<div id="accordion">
-						<?php
-							$dbHost = 'localhost';
-							$dbName = 'db_cahaya';
-							$dbUsername = "root";
-							$dbPassword = "";
-						
-							try{
-								$dbConn = new PDO ("pgsql:host={$dbHost};dbname={$dbName}", $dbUsername, $dbPassword);
-								$dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-							}
-							catch(PDOException $e){
-								echo $e -> getMessage();
-							}
-							$sql = "SELECT * FROM tb_faq ORDER BY id";
-							$result = $dbConn -> prepare($sql);
-							$result -> execute();
-							$huruf = array("zero", "One", "Two", "Three", "Four", "Five");
-							while($row = $result -> fetch(PDO::FETCH_ASSOC)){
-								echo "<div class='card'>";
-								echo "<div class='card-header' id='heading".$huruf[$row['id']]."'>";
-								echo "<h5 class='mb-0'>";
-								echo "<button class='btn btn-link' data-toggle='collapse' data-target='#collapse".$huruf[$row['id']]."' aria-expanded='true' aria-controls='collapse".$huruf[$row['id']]."'>";
-								echo $row['pertanyaan'];
-								echo "</button></h5></div>";
-								echo "<div id='collapse".$huruf[$row['id']]."' class='collapse' aria-labelledby='heading".$huruf[$row['id']]."' data-parent='#accordion'><div class='card-body'>";
-								echo $row['jawaban'];
-								echo "</div></div></div>";
-							}
-						?>			
 					
 					<!-- @foreach ($data_faq as $faq)
 						<script>
@@ -282,7 +253,7 @@
 					@endforeach		 -->
 					
 					
-						<!-- @foreach ($data_faq as $faq)
+						@foreach ($data_faq as $faq)
 						<div class="card">
 							<div class="card-header" id='heading"{{$faq->id}}"'>
 								<h5 class="mb-0">
@@ -291,7 +262,7 @@
 							</div>
 							<div id="collapse" class='collapse"{{$faq->id}}"' aria-labelledby='heading"{{$faq->id}}"' data-parent="#accordion"> <div class="card-body">{{$faq->jawaban}}</div> </div>
 						</div>
-						@endforeach -->
+						@endforeach
 						
 					</div>							
 				</div>	
