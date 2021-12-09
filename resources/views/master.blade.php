@@ -91,7 +91,7 @@
 			@foreach ($data_about as $about)
 			<div class="col-md-4">
 				<div class="servicee">
-					<div class="icon-holder"><img src="{{asset('storage/'.$about->icon)}}"></div>
+					<div class="icon-holder"><img src="{{asset('storage/'.$about->icon)}}" style="width:100px; height: 100px"></div>
 					<h4 class="heading">{{$about->head}}</h4>
 					<p class="description">{{$about->deskripsi}}</p>
 				</div>
@@ -114,7 +114,7 @@
 			<div class="row services">
 				@foreach ($data_produk as $produk)
 				<div class="col-md-4"><div class="service">
-					<div class="icon-holder"><img src="{{asset('storage/'.$produk->icon)}}"></div>
+					<div class="icon-holder"><img src="{{asset('storage/'.$produk->icon)}}" style="width: 80px; height: 75px"></div>
 					<h4 class="heading">{{$produk->jenis}}</h4>
 					<p class="description">{{$produk->deskripsi}}</p>
 					<br><br><br>
