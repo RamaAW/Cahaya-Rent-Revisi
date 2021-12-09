@@ -48,7 +48,7 @@
                     <td>{{++$no}}</td>
                     <td>{{$maps->alamat}}</td>
                     <td>{{$maps->no_telp}}</td>
-                    <td>{{$maps->link}}</td>
+                    <td><button type="button" class="btn btn-warning"><a href="{{$maps->link}}" target="_blank">Maps</a></button></td>
                     <td>
                         <form action="{{route('maps.destroy', $maps->id)}}" method="POST">
                             @csrf

@@ -46,8 +46,8 @@
             <input type="text" class="form-control" name="tipe" value="{{$detail->tipe}}">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Keterangan</label>
-            <input type="text" class="form-control" name="keterangan" value="{{$detail->keterangan}}">
+            <label for="exampleInputPassword1" class="form-label">Keterangan/Spesifikasi</label>
+            <textarea class="form-control" aria-label="With textarea" name="keterangan" value="{{$detail->keterangan}}"></textarea>
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Foto</label>
