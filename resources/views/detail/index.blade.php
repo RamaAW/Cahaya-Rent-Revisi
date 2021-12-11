@@ -59,7 +59,7 @@
                     <td>{{++$no}}</td>
                     <td>{{$data->produk->jenis}}</td>
                     <td>{{$data->tipe}}</td>
-                    <td>{{$data->keterangan}}</td>
+                    <td>{!!$data->keterangan!!}</td>
                     <td>{{$data->foto}}</td>
                     <td>
                         <form action="{{route('detail.destroy', $data->id)}}" method="POST">

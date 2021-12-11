@@ -46,10 +46,20 @@
             <label for="exampleInputPassword1" class="form-label">Tipe</label>
             <input type="text" class="form-control" name="tipe">
         </div>
-        <div class="mb-3">
+
+        <!-- <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Keterangan/Spesifikasi</label>
             <textarea class="form-control" aria-label="With textarea" name="keterangan"></textarea>
+        </div> -->
+
+        <!-- Trix Editor -->
+        <div class="mb-3">
+            <label for="keterangan" class="form-label">Keterangan/Spesifikasi</label>
+            <input id="keterangan" type="hidden" name="keterangan">
+            <trix-editor input="keterangan"></trix-editor>
         </div>
+        <!-- Trix Editor -->
+
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Foto</label>
             <input type="file" class="date form-control" name="foto">
@@ -69,4 +79,11 @@
             </div> -->
         </form>
     </div>
+@endsection
+
+@section('js')
+<script>document.addEventListener('trix-file-accept', function(e) {
+     e.preventDefault();
+})
+</script>
 @endsection

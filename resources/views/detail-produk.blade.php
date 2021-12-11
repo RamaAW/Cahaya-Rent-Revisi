@@ -19,6 +19,11 @@
   	<link href="{{asset('fontawesome/css/brands.css')}}" rel="stylesheet">
   	<link href="{{asset('fontawesome/css/solid.css')}}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/003603851d.js" crossorigin="anonymous"></script>
+
+	<!-- Trix Editor -->
+    <link rel="stylesheet" type="text/css" href="/css/trix.css">
+    <script type="text/javascript" src="/js/trix.js"></script>
+    <!-- Trix Editor -->
 </head>
 
 
@@ -75,9 +80,8 @@
 				</div>
 				<div class="col-lg-6 no-padding home-about-right">
 					<h1>{{$data->tipe}}</h1>
-					<p>
-					{{$data->keterangan}}
-					</p>
+					<p>{!!$data->keterangan!!}</p>
+					
 				</div>
 			</div>
 		</div>

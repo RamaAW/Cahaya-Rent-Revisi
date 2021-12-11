@@ -30,7 +30,7 @@
         <form action="{{route('detail.search')}}" method="get" class="form-inline">
             @csrf
             <div class="form-group mx-sm-3 mb-2">
-                <label for="search" class="sr-only">Password</label>
+                <label for="search" class="sr-only"></label>
                 <input type="text" class="form-control" id="cari" name="kata" placeholder="Cari Produk Apa?">
             </div>
             <button type="submit" class="btn btn-primary mb-2">Cari</button>

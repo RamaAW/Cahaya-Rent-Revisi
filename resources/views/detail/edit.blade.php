@@ -37,7 +37,7 @@
             <label for="exampleInputEmail1" class="form-label">Jenis</label>
             <select name="id_detail" class="form-control">
             @foreach ($produk as $data)
-                <option value="{{$data->id}}">{{$data->jenis}}</option>
+                <option value="{{$data->id}}" selected>{{$data->jenis}}</option>
             @endforeach
             </select>
         </div>
@@ -45,10 +45,20 @@
             <label for="exampleInputPassword1" class="form-label">Tipe</label>
             <input type="text" class="form-control" name="tipe" value="{{$detail->tipe}}">
         </div>
-        <div class="mb-3">
+
+        <!-- <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Keterangan/Spesifikasi</label>
             <textarea class="form-control" aria-label="With textarea" name="keterangan" value="{{$detail->keterangan}}"></textarea>
+        </div> -->
+
+        <!-- Trix Editor -->
+        <div class="mb-3">
+            <label for="keterangan" class="form-label">Keterangan/Spesifikasi</label>
+            <input id="keterangan" type="hidden" name="keterangan" value="{{$detail->keterangan}}">
+            <trix-editor input="keterangan"></trix-editor>
         </div>
+        <!-- Trix Editor -->
+
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Foto</label>
             <input type="file" class="date form-control" name="foto" value="{{$detail->foto}}">
@@ -58,4 +68,11 @@
         <a class="btn btn-secondary" href="/detail">Cancel</a>
         </form>
     </div>
+@endsection
+
+@section('js')
+<script>document.addEventListener('trix-file-accept', function(e) {
+     e.preventDefault();
+})
+</script>
 @endsection

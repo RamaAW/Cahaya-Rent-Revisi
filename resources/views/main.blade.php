@@ -16,10 +16,19 @@
     <link rel="stylesheet" href="/style/assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="/style/assets/scss/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Trix Editor -->
+    <link rel="stylesheet" type="text/css" href="/css/trix.css">
+    <script type="text/javascript" src="/js/trix.js"></script>
+    <!-- Trix Editor -->
+
+    <style>
+        trix-toolbar [data-trix-button-group="file-tools"] {display: none;}
+
+    </style>
+
 </head>
 <body>
-    
-    
 
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
@@ -165,6 +174,8 @@
     <script src="/style/assets/js/plugins.js"></script>
     <script src="/style/assets/js/main.js"></script>
     <script src="https://kit.fontawesome.com/003603851d.js" crossorigin="anonymous"></script>
+
+    @yield('js')
 
 </body>
 </html>
