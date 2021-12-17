@@ -52,7 +52,7 @@ class AboutController extends Controller
     public function destroy($id){
         $about = About::find($id);
         $about->delete();
-        return redirect('/about')->with('pesan', 'Data About Us Berhasil di Musnahkan');
+        return redirect('/about')->with('pesan', 'Data About Us Berhasil di hapus');
     }
 
     public function edit($id){

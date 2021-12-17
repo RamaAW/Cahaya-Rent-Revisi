@@ -44,7 +44,7 @@ class ReviewController extends Controller
     public function destroy($id){
         $review = Reviews::find($id);
         $review->delete();
-        return redirect('/review')->with('pesan', 'Data Review Berhasil di Musnahkan');
+        return redirect('/review')->with('pesan', 'Data Review Berhasil di hapus');
     }
 
     public function edit($id){
