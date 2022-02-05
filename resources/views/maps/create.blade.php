@@ -35,15 +35,15 @@
         @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Alamat</label>
-            <input type="text" class="form-control" name="alamat">
+            <input type="text" class="form-control" name="alamat" value="{{ old('alamat') }}">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">No Telp</label>
-            <input type="text" class="form-control" name="no_telp">
+            <input type="text" class="form-control" name="no_telp" value="{{ old('no_telp') }}">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Link Google Maps</label>
-            <input type="text" class="form-control" name="link">
+            <input type="text" class="form-control" name="link" value="{{ old('link') }}">
         </div>
 
         <button type="submit" class="btn btn-primary">Simpan</button>

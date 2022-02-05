@@ -60,7 +60,7 @@
                     <td>{{$data->produk->jenis}}</td>
                     <td>{{$data->tipe}}</td>
                     <td>{!!$data->keterangan!!}</td>
-                    <td>{{$data->foto}}</td>
+                    <td><img src="{{asset('storage/'.$data->foto)}}" style="width: 100px; height: 80px"></td>
                     <td>
                         <form action="{{route('detail.destroy', $data->id)}}" method="POST">
                             @csrf

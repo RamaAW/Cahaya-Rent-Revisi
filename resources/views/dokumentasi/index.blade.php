@@ -48,7 +48,7 @@
                     <td>{{++$no}}</td>
                     <td>{{$dok->judul}}</td>
                     <td>{{$dok->tanggal}}</td>
-                    <td>{{$dok->foto}}</td>
+                    <td><img src="{{asset('storage/'.$dok->foto)}}" alt="" width="150" class="rounded mb-2"></td>
                     <td>
                         <form action="{{route('dok.destroy', $dok->id)}}" method="POST">
                             @csrf

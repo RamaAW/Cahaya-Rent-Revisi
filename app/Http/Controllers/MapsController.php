@@ -51,6 +51,11 @@ class MapsController extends Controller
     }
 
     public function update(Request $request, $id){
+        $this->validate($request,[
+            'alamat'         => 'required|string',
+            'no_telp'       => 'required|string',
+            'link'       => 'required|string',
+        ]);
         $maps = Alamat::find($id);
         $maps->alamat = $request->alamat;
         $maps->no_telp = $request->no_telp;

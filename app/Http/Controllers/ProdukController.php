@@ -64,11 +64,18 @@ class ProdukController extends Controller
     }
 
     public function update(Request $request, $id){
+        $this->validate($request,[
+            'jenis'         => 'required|string',
+            'deskripsi'     => 'required',
+            // 'icon'          => 'required|image|mimes:jpeg,jpg,png',
+        ]);
         $produk = Produk::find($id);
         $produk->jenis = $request->jenis;
         $produk->deskripsi = $request->deskripsi;
         $produk->produk_seo = Str::slug($request->jenis, '-');
-        $produk->icon = $request->file('icon')->store('post-images');
+        if($request->file('icon')) {
+            $produk->icon = $request->file('icon')->store('post-images');
+        }
         
         // $icon = $request->icon;
         // $namafile = time().'.'.

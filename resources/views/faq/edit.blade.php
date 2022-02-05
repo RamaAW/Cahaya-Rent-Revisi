@@ -35,11 +35,11 @@
         @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Pertanyaan</label>
-            <input type="text" class="form-control" name="pertanyaan" value="{{$faq->alamat}}">
+            <input type="text" class="form-control" name="pertanyaan" value="{{$faq->pertanyaan}}">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Jawaban</label>
-            <input type="text" class="form-control" name="jawaban" value="{{$faq->no_telp}}">
+            <input type="text" class="form-control" name="jawaban" value="{{$faq->jawaban}}">
         </div>
 
         <button type="submit" class="btn btn-primary">Simpan</button>

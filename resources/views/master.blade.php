@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<link rel="shortcut icon" href="/img/logo2.png">
+	<link rel="shortcut icon" href="/img/logo new cahaya.png">
 	<title>Cahaya Rent</title>
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 	<link rel="stylesheet" href="/css/linearicons.css">
@@ -28,7 +28,7 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-between d-flex">
 			    <div id="logo">
-			        <a href="../PAD1"><img src="/img/Dark Logotype 2.png" width="130" height="25"></a>
+			        <img src="/img/2.png" alt="" width="70px">
 			    </div>
 			    <nav id="nav-menu-container"><!-- #nav-menu-container -->	
 				    <ul class="nav-menu">
@@ -53,7 +53,7 @@
 			<div class="row fullscreen d-flex align-items-center justify-content-center">
 				<div class="banner-content col-lg-10">
 					<br><br><br>
-					<h5 class="text-white text-uppercase">Tempat Penyewaan Komputer</h5>
+					<h5 class="text-white text-uppercase">Tempat Penyewaan Laptop dan Komputer</h5>
 					<h1 class="cd-headline clip is-full-width">
 						<span>Cahaya</span>
 						<span class="cd-words-wrapper">
@@ -78,13 +78,13 @@
 		<div class="row d-flex justify-content-center">
 			<div class="col-md-8 pb-40 header-text">
 				<h1>CAHAYA RENT</h1>
-				<p>Sewa Laptop, Komputer, Projector, TV, Printer, dan Multimedia</p>
+				<p>Sewa Laptop, Komputer dan Multimedia</p>
 			</div>
 		</div>
 		</div>
 		<div>
 			<center>
-				<img class="img-fluid" src="/img/aboutuscahaya.png" width="100%" height="100%">
+				<img class="img-fluid" src="/img/Header About Us.png" width="100%" height="100%">
 			</center>
 		</div>
 		<div class="row services">
@@ -199,7 +199,7 @@
 				</div>
 			</div>						
 			<div class="row">
-				@foreach ($data_review as $review)	
+				@foreach ($data_review as $review)
 				<div class="col-lg-4 col-md-6">
 					<div class="single-review">
 						<h4>{{$review->nama}}</h4>
@@ -292,10 +292,10 @@
 						</p>
 					</div>
 				</div>
-				<div class="col-lg-6  col-md-4 col-sm-12">
+				<div class="col-lg-4  col-md-4 col-sm-12">
 					<div class="single-footer-widget">
 						<h6>Feedback</h6>
-						<p>Give your feedback</p>
+						<p class="footer-text">Give your feedback</p>
 						<div class="" id="mc_embed_feedback">
 							@foreach ($data_email as $email)
 							<a class="primary-btn" href="{{$email->link_email}}" target="_blank">Feedback to Email</a>
@@ -303,7 +303,27 @@
 							@endforeach
 						</div>
 					</div>
-				</div>												
+				</div>
+
+				<!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+					<div class="single-footer-widget">
+						<img src="/img/bca.png" alt="" width="100" class="">
+						<img src="/img/bni.png" alt="" width="100" class="footer-text">
+						<img src="/img/bri.png" alt="" width="100" class="footer-text">
+					</div>
+				</div> -->
+
+				<div class="col-lg-2 col-md-4 col-sm-8 social-widget">
+					<div class="single-footer-widget">
+						<h6>Bank</h6>
+						<div class="">
+							<img src="/img/bca.png" alt="" width="100" class="footer-text">
+							<img src="/img/bni.png" alt="" width="100" class="footer-text">
+							<img src="/img/bri.png" alt="" width="100" class="footer-text">
+						</div>
+					</div>
+				</div>	
+
 			</div>
 		</div>
 	</footer>

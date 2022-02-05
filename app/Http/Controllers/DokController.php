@@ -52,7 +52,7 @@ class DokController extends Controller
     public function destroy($id){
         $dok = Dokumentasi::find($id);
         $dok->delete();
-        return redirect('/dok')->with('pesan', 'Data Dokumentasi Berhasil di Musnahkan');
+        return redirect('/dok')->with('pesan', 'Data Dokumentasi Berhasil di hapus');
     }
 
     public function edit($id){
@@ -61,11 +61,17 @@ class DokController extends Controller
     }
 
     public function update(Request $request, $id){
+        $this->validate($request,[
+            'judul'         => 'required|string',
+            'tanggal'       => 'required|string',
+            // 'foto'          => 'required|image|mimes:jpeg,jpg,png',
+        ]);
         $dok = Dokumentasi::find($id);
         $dok->judul = $request->judul;
         $dok->tanggal = $request->tanggal;
-        $dok->foto = $request->file('foto')->store('post-images');
-        // $foto = $request->foto;
+        if($request->file('foto')) {
+            $dok->foto = $request->file('foto')->store('post-images');
+        }        // $foto = $request->foto;
         // $namafile = time().'.'.
         // $foto->getClientOriginalExtension();
 

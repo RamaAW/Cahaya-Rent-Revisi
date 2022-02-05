@@ -35,19 +35,19 @@
         @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Head</label>
-            <input type="text" class="form-control" name="head">
+            <input type="text" class="form-control" name="head" value="{{ old('head') }}">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Deskripsi</label>
-            <input type="text" class="form-control" name="deskripsi">
+            <input type="text" class="form-control" name="deskripsi" value="{{ old('deskripsi') }}">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Icon</label>
-            <input type="file" class="date form-control" name="icon">
+            <input type="file" class="date form-control" name="icon" value="{{ old('icon') }}">
         </div>
 
         <button type="submit" class="btn btn-primary">Simpan</button>
-        <a class="btn btn-secondary" href="/">Cancel</a>
+        <a class="btn btn-secondary" href="/about">Cancel</a>
 
         </form>
     </div>

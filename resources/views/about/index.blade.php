@@ -48,7 +48,7 @@
                     <td>{{++$no}}</td>
                     <td>{{$about->head}}</td>
                     <td>{{$about->deskripsi}}</td>
-                    <td>{{$about->icon}}</td>
+                    <td><img src="{{asset('storage/'.$about->icon)}}" alt="" width="100" class="rounded mb-2"></td>
                     <td>
                         <form action="{{route('about.destroy', $about->id)}}" method="POST">
                             @csrf

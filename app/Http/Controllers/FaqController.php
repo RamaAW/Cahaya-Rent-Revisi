@@ -49,6 +49,10 @@ class FaqController extends Controller
     }
 
     public function update(Request $request, $id){
+        $this->validate($request,[
+            'pertanyaan'         => 'required|string',
+            'jawaban'       => 'required|string',
+        ]);
         $faq = Faq::find($id);
         $faq->pertanyaan = $request->pertanyaan;
         $faq->jawaban = $request->jawaban;

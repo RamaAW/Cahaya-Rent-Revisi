@@ -3039,3 +3039,8 @@ h6 {
 .service .icon-holder > img.icon {
 	width: 55px;
 }
+
+.bank {
+position: relative;
+padding-right: 40px;
+}

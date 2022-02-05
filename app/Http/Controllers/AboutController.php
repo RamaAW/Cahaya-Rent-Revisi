@@ -52,7 +52,7 @@ class AboutController extends Controller
     public function destroy($id){
         $about = About::find($id);
         $about->delete();
-        return redirect('/about')->with('pesan', 'Data About Us Berhasil di hapus');
+        return redirect('/about')->with('pesan', 'Data About Us Berhasil dihapus');
     }
 
     public function edit($id){
@@ -61,10 +61,16 @@ class AboutController extends Controller
     }
 
     public function update(Request $request, $id){
+        $this->validate($request,[
+            'head'         => 'required|string',
+            'deskripsi'       => 'required',
+        ]);
         $about = About::find($id);
         $about->head = $request->head;
         $about->deskripsi = $request->deskripsi;
-        $about->icon = $request->file('icon')->store('post-images');
+        if($request->file('icon')) {
+            $about->icon = $request->file('icon')->store('post-images');
+        }
         // $icon = $request->icon;
         // $namafile = time().'.'.
         // $icon->getClientOriginalExtension();

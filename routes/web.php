@@ -20,6 +20,10 @@ Auth::routes([
 
 Route::get('/', 'MainController@index');
 
+// Login
+Route::get('/home', 'HomeController@index');
+
+
 // About
 Route::get('/about', 'AboutController@index');
 Route::get('/about/create', 'AboutController@create')->name('about.create');

@@ -33,7 +33,7 @@
 		<div class="container">
 			<div class="row align-items-center justify-content-between d-flex">
 			    <div id="logo">
-					<a href="../PAD1"><img src="{{asset('img/Dark Logotype 2.png')}}" width="130" height="25"></a>
+					<img src="/img/2.png" alt="" width="70px">
 			    </div>
 			    <nav id="nav-menu-container"><!-- #nav-menu-container -->	
 				    <ul class="nav-menu">

@@ -35,7 +35,7 @@
         @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Link Email</label>
-            <input type="text" class="form-control" name="link_email" value="mailto:emailanda@gmail.com"><br>
+            <input type="text" class="form-control" name="link_email" value="mailto:emailanda@gmail.com" value="{{ old('link_email') }}"><br>
             <p>Pengisian email menggunakan awalan mailto: <br> Contoh : mailto:namakamu@gmail.com</p>
         </div>
 

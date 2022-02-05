@@ -49,7 +49,7 @@
                     <td>{{++$no}}</td>
                     <td>{{$produk->jenis}}</td>
                     <td>{{$produk->deskripsi}}</td>
-                    <td>{{$produk->icon}}</td>
+                    <td><img src="{{asset('storage/'.$produk->icon)}}" alt="" width="80" class="rounded mb-2"></td>
                     <td>{{$produk->produk_seo}}</td>
                     <td>
                         <form action="{{route('produk.destroy', $produk->id)}}" method="POST">

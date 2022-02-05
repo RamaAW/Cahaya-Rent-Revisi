@@ -35,15 +35,15 @@
         @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Judul</label>
-            <input type="text" class="form-control" name="judul">
+            <input type="text" class="form-control" name="judul" value="{{ old('judul') }}">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Tanggal</label>
-            <input type="text" class="form-control" name="tanggal" placeholder="Tanggal dd-mm-yyyy">
+            <input type="text" class="form-control" name="tanggal" placeholder="Tanggal dd-mm-yyyy" value="{{ old('tanggal') }}">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Foto</label>
-            <input type="file" class="date form-control" name="foto">
+            <input type="file" class="date form-control" name="foto" value="{{ old('foto') }}">
         </div>
 
         <button type="submit" class="btn btn-primary">Simpan</button>

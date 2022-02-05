@@ -51,7 +51,7 @@ class DetailController extends Controller
     public function destroy($id){
         $detail = DetailProduk::find($id);
         $detail->delete();
-        return redirect('/detail')->with('pesan', 'Data Detail Produk Berhasil di Musnahkan');
+        return redirect('/detail')->with('pesan', 'Data Detail Produk Berhasil di hapus');
 
     }
 
@@ -62,12 +62,19 @@ class DetailController extends Controller
     }
 
     public function update(Request $request, $id){
+        $this->validate($request,[
+            'tipe'=>'required',
+            'keterangan'=> 'required',
+            // 'foto'=>'required|image|mimes:jpeg,jpg,png'
+        ]);
         $detail = DetailProduk::find($id);
         // $detail->judul_produk = $request->judul_produk;
         $detail->tipe = $request->tipe;
         $detail->keterangan = $request->keterangan;
         $detail->id_detail = $request->id_detail;
-        $detail->foto = $request->file('foto')->store('post-images');
+        if($request->file('foto')) {
+            $detail->foto = $request->file('foto')->store('post-images');
+        }
         // $foto = $request->foto;
         // $namafile=time().'.'.$foto->getClientOriginalExtension();
 

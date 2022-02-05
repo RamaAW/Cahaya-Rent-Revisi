@@ -44,7 +44,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Tipe</label>
-            <input type="text" class="form-control" name="tipe">
+            <input type="text" class="form-control" name="tipe" value="{{ old('tipe') }}">
         </div>
 
         <!-- <div class="mb-3">
@@ -55,14 +55,14 @@
         <!-- Trix Editor -->
         <div class="mb-3">
             <label for="keterangan" class="form-label">Keterangan/Spesifikasi</label>
-            <input id="keterangan" type="hidden" name="keterangan">
+            <input id="keterangan" type="hidden" name="keterangan" value="{{ old('keterangan') }}">
             <trix-editor input="keterangan"></trix-editor>
         </div>
         <!-- Trix Editor -->
 
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Foto</label>
-            <input type="file" class="date form-control" name="foto">
+            <input type="file" class="date form-control" name="foto" value="{{ old('foto') }}">
         </div>
         
 

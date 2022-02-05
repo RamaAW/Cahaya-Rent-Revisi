@@ -53,6 +53,12 @@ class ReviewController extends Controller
     }
 
     public function update(Request $request, $id){
+        $this->validate($request,[
+            'nama'         => 'required|string',
+            'email'       => 'required|string',
+            'review'          => 'required',
+            'rating'          => 'required',
+        ]);
         $review = Reviews::find($id);
         $review->nama = $request->nama;
         $review->email = $request->email;

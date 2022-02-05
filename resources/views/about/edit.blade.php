@@ -43,11 +43,13 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Icon</label>
+            <br>
+            <img src="{{ asset('storage/' . $about->icon) }}" alt="" width="100" class="rounded mb-2">
             <input type="file" class="date form-control" name="icon" value="{{$about->icon}}">
         </div>
 
         <button type="submit" class="btn btn-primary">Simpan</button>
-        <a class="btn btn-secondary" href="/">Cancel</a>
+        <a class="btn btn-secondary" href="/about">Cancel</a>
 
             <!-- <div>Judul <input type="text" name="judul"></div>
             <div>Penulis <input type="text" name="penulis"></div>

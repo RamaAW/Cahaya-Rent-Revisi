@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\About;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $batas = 10;
+        $data_about = About::orderBy('id')->paginate($batas);
+        $no = $batas * ($data_about->currentPage()-1);
+
+        return view('about.index', compact('data_about', 'no'));
     }
+
 }

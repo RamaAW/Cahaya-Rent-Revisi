@@ -43,6 +43,8 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">foto</label>
+            <br>
+            <img src="{{ asset('storage/' . $dok->foto) }}" alt="" width="250" class="rounded mb-2">
             <input type="file" class="date form-control" name="foto" value="{{$dok->foto}}">
         </div>
 
